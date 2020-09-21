@@ -1,5 +1,7 @@
-file (GLOB SRC
-  *.cpp
+set (SRC
+  main.cpp
+  testUSStandardAtmosphere1976.cpp
+  testLavalNozzle.cpp
 )
 
 add_executable (UnitTest ${SRC})

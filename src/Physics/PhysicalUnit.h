@@ -419,15 +419,15 @@ constexpr LuminousIntensity operator"" _cd(unsigned long long int x) {
 
 // Area
 constexpr Area metre2 = metre * metre;
-constexpr Area operator"" _sqm(long double x) { return Area(x); };
-constexpr Area operator"" _sqm(unsigned long long int x) {
+constexpr Area operator"" _m2(long double x) { return Area(x); };
+constexpr Area operator"" _m2(unsigned long long int x) {
   return Area(static_cast<long double>(x));
 };
 
 // Volume
 constexpr Volume metre3 = metre2 * metre;
-constexpr Volume operator"" _cbm(long double x) { return Volume(x); };
-constexpr Volume operator"" _cbm(unsigned long long int x) {
+constexpr Volume operator"" _m3(long double x) { return Volume(x); };
+constexpr Volume operator"" _m3(unsigned long long int x) {
   return Volume(static_cast<long double>(x));
 };
 
@@ -478,6 +478,7 @@ constexpr LapseRate operator"" _Kpm(unsigned long long int x) {
 };
 
 // Physical constants
+constexpr Number PI = std::atan(1) * 4;
 constexpr GasConstant R =
     8.31432 * kg * metre2 /
     (second * second * mol * kelvin);  // universal gas constant
